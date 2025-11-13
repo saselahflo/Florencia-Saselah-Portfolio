@@ -558,22 +558,157 @@ section {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* ================= RESPONSIVE ADJUSTMENTS ================= */
+
+/* --- Tablet (max 1024px) --- */
+@media (max-width: 1024px) {
+   .hero {
+      flex-direction: column;
+      padding: 60px 40px;
+      text-align: center;
+   }
+
+   .hero-content {
+      flex-direction: column;
+      gap: 40px;
+   }
+
+   .hero-text {
+      text-align: center;
+   }
+
+   .profile-pic {
+      width: 300px;
+      height: 300px;
+   }
+
+   section {
+      padding: 80px 40px;
+   }
+
+   .exp-item {
+      padding: 40px 40px;
+   }
+}
+
+/* --- Mobile (max 768px) --- */
+@media (max-width: 768px) {
+   .navbar {
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px 20px;
+   }
+
+   nav ul {
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+   }
+
+   .hero {
+      padding: 60px 20px;
+   }
+
+   .name {
+      font-size: 32px;
+   }
+
+   .description {
+      font-size: 16px;
+      line-height: 1.5;
+   }
+
+   .buttons {
+      justify-content: center;
+   }
+
+   .skills-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+   }
+
+   .skills-box {
+      width: 90%;
+   }
+
+   .org-container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+   }
+
+   .org-images img {
+      max-width: 100%;
+      height: auto;
+   }
+
    .exp-item {
       flex-direction: column;
-      text-align: center;
+      padding: 30px 20px;
+      gap: 30px;
    }
 
    .exp-text {
       text-align: center;
    }
 
-   .exp-images {
-      justify-content: center;
+   .exp-images img,
+   .exp-images.single img,
+   .exp-images.landscape img {
+      max-width: 100%;
+      height: auto;
    }
 
-   .exp-images img {
+   .exp-images.landscape {
+      justify-content: center;
+      padding-right: 0;
+   }
+
+   .exp-images.single {
+      margin-right: 0;
+   }
+}
+
+/* --- Small Mobile (max 480px) --- */
+@media (max-width: 480px) {
+   .logo {
+      font-size: 18px;
+   }
+
+   nav ul li a {
+      font-size: 14px;
+   }
+
+   .profile-pic {
+      width: 220px;
+      height: 220px;
+   }
+
+   .name {
+      font-size: 26px;
+   }
+
+   .description {
+      font-size: 14px;
+   }
+
+   .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+   }
+
+   .skills-box {
+      padding: 25px 20px;
+   }
+
+   .edu-card,
+   .org-card,
+   .exp-item {
       width: 100%;
-      height: auto;
+      padding: 20px;
+   }
+
+   section {
+      padding: 60px 20px;
    }
 }
