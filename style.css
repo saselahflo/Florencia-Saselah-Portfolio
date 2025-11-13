@@ -1,0 +1,579 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   background: linear-gradient(135deg, #f3e8ff 0%, #e0f2fe 100%);
+   color: #333;
+}
+
+/* Navbar */
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 80px;
+   background: rgba(255, 255, 255, 0.8);
+   backdrop-filter: blur(8px);
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+
+.logo {
+   font-family: 'Playfair Display', serif;
+   font-size: 22px;
+   font-weight: 600;
+   color: #234C6A;
+}
+
+nav ul {
+   display: flex;
+   gap: 25px;
+   list-style: none;
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: #444;
+   font-weight: 500;
+   transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+   color: #234C6A;
+}
+
+/* Hero Section */
+.hero {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 80px 60px;
+   min-height: 80vh;
+}
+
+.hero-content {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   gap: 60px;
+   max-width: 1100px;
+}
+
+.hero-image {
+   flex: 1;
+   text-align: center;
+}
+
+.profile-pic {
+   width: 390px;
+   height: 390px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 6px solid white;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-text {
+   flex: 1.2;
+   text-align: left;
+   min-width: 320px;
+}
+
+.name {
+   font-family: 'Playfair Display', serif;
+   font-size: 44px;
+   color: #234C6A;
+   font-weight: 600;
+   margin-bottom: 15px;
+}
+
+.description {
+   font-size: 18px;
+   color: #555;
+   margin-bottom: 30px;
+   line-height: 1.7;
+   max-width: 550px;
+}
+
+/* Buttons */
+.buttons {
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+/* Base button */
+.btn {
+   display: inline-block;
+   padding: 14px 30px;
+   border-radius: 50px;
+   text-decoration: none;
+   font-weight: 500;
+   font-size: 16px;
+   letter-spacing: 0.3px;
+   text-align: center;
+   border: none;
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+/* Gradient button */
+.cv {
+   background: linear-gradient(90deg, #234C6A, #3e6d8f);
+   color: #fff;
+   box-shadow: 0 6px 15px rgba(157, 123, 255, 0.35);
+}
+
+/* Outline buttons */
+.linkedin {
+   background: transparent;
+   border: 2px solid #234C6A;
+   color: #234C6A;
+   box-shadow: 0 2px 6px rgba(124, 58, 237, 0.15);
+}
+
+.contact {
+   background: transparent;
+   border: 2px solid #63839a;
+   color: #234C6A;
+   box-shadow: 0 2px 6px rgba(167, 139, 250, 0.15);
+}
+
+/* Hover effects */
+.btn:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+   opacity: 0.95;
+}
+
+/* Active effect */
+.btn:active {
+   transform: translateY(0);
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Container */
+section {
+   padding: 100px 80px;
+}
+
+/* Skills Section */
+.skills {
+   padding: 40px 60px 100px;
+   text-align: center;
+   background: linear-gradient(135deg, #f3e8ff 0%, #e0f2fe 100%);
+}
+
+.skills h2 {
+   font-size: 32px;
+   color: #234C6A;
+   margin-bottom: 15px;
+   font-family: 'Playfair Display', serif;
+}
+
+.skills-desc {
+   color: #555;
+   font-size: 18px;
+   margin-bottom: 50px;
+}
+
+.skills-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 50px;
+}
+
+.skills-box {
+   background: white;
+   border-radius: 16px;
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+   padding: 40px 30px;
+   width: 300px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   text-align: left;
+}
+
+.skills-box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.skills-box h3 {
+   color: #234C6A;
+   margin-bottom: 20px;
+   font-size: 22px;
+}
+
+.skills-box ul {
+   list-style: none;
+   padding: 0;
+}
+
+.skills-box li {
+   position: relative;
+   padding-left: 25px;
+   margin-bottom: 12px;
+   color: #444;
+}
+
+.skills-box li::before {
+   content: "✔";
+   color: #234C6A;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+
+/* Education Section */
+.education {
+   background: linear-gradient(135deg, #f3e8ff 0%, #e0f2fe 100%);
+   /* lembut, beda dari hero */
+   text-align: center;
+   padding: 80px 60px 40px;
+}
+
+.education h2 {
+   font-family: 'Playfair Display', serif;
+   font-size: 36px;
+   color: #234C6A;
+   margin-bottom: 40px;
+}
+
+.edu-card {
+   background: white;
+   border-radius: 16px;
+   padding: 30px;
+   margin: 0 auto 30px;
+   max-width: 700px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+   transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+   transform: translateY(-5px);
+}
+
+/* ===== Organization Section ===== */
+.organization {
+   padding: 100px 60px;
+   text-align: center;
+   background: linear-gradient(135deg, #eef2ff 0%, #f3e8ff 100%);
+}
+
+.organization h2 {
+   font-size: 34px;
+   color: #234C6A;
+   margin-bottom: 15px;
+   font-family: 'Playfair Display', serif;
+}
+
+.org-desc {
+   color: #555;
+   font-size: 18px;
+   margin-bottom: 60px;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.org-container {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 30px;
+   max-width: 1400px;
+   margin: 0 auto;
+   justify-items: center;
+}
+
+
+.org-card {
+   background: #fff;
+   border-radius: 16px;
+   padding: 25px 20px;
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+   width: 100%;
+   max-width: 320px;
+   transition: all 0.3s ease;
+}
+
+.org-card:hover {
+   transform: translateY(-6px);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.org-card h3 {
+   color: #234C6A;
+   margin-bottom: 10px;
+   font-size: 20px;
+}
+
+.org-card p {
+   color: #555;
+   font-size: 15px;
+   line-height: 1.6;
+   margin-bottom: 20px;
+}
+
+/* Jabatan di setiap organisasi */
+.org-role {
+   font-size: 15px;
+   color: #555;
+   font-weight: 500;
+   margin-bottom: 12px;
+   font-family: 'Poppins', sans-serif;
+}
+
+/* Two images per card */
+.org-images {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   flex-wrap: wrap;
+}
+
+.org-images img {
+   width: 100%;
+   max-width: 280px;
+   height: 160px;
+   /* lebih lebar daripada tinggi → landscape */
+   object-fit: cover;
+   border-radius: 14px;
+   border: 4px solid #fff;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+}
+
+.org-images img:hover {
+   transform: scale(1.05);
+}
+
+/* Responsif */
+@media (max-width: 1200px) {
+   .org-container {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (max-width: 900px) {
+   .org-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 600px) {
+   .org-container {
+      grid-template-columns: 1fr;
+   }
+}
+
+/* Experience Section */
+.experience {
+   padding: 100px 60px;
+   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+   text-align: center;
+}
+
+.experience h2 {
+   font-size: 32px;
+   color: #234C6A;
+   font-family: 'Playfair Display', serif;
+   margin-bottom: 15px;
+}
+
+.exp-desc {
+   color: #555;
+   font-size: 18px;
+   margin-bottom: 60px;
+}
+
+/* Container */
+.exp-container {
+   display: flex;
+   flex-direction: column;
+   gap: 60px;
+   align-items: center;
+}
+
+/* Each experience item (2-column layout) */
+.exp-item {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 60px;
+   background: white;
+   border-radius: 20px;
+   padding: 60px 80px;
+   /* Tambah padding kanan & kiri */
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+   max-width: 1400px;
+   width: 95%;
+   margin: 0 auto;
+   transition: transform 0.3s ease;
+}
+
+.exp-item:hover {
+   transform: translateY(-4px);
+}
+
+/* Left side (text) */
+.exp-text {
+   flex: 1.1;
+   text-align: left;
+}
+
+.exp-text h3 {
+   color: #234C6A;
+   font-size: 22px;
+   margin-bottom: 15px;
+}
+
+.exp-text p {
+   color: #444;
+   font-size: 16px;
+   line-height: 1.6;
+   text-align: justify;
+   margin-bottom: 20px;
+}
+
+.exp-link {
+   display: inline-block;
+   text-decoration: none;
+   color: white;
+   background: linear-gradient(90deg, #234C6A, #6394b8);
+   padding: 10px 20px;
+   border-radius: 8px;
+   font-weight: 500;
+   transition: background 0.3s ease;
+}
+
+.exp-link:hover {
+   background: linear-gradient(90deg, #234C6A, #6394b8);
+}
+
+/* Skills/Tools Section */
+.exp-skills {
+   background: #f5f3ff;
+   border-left: 4px solid #234C6A;
+   padding: 10px 16px;
+   border-radius: 8px;
+   color: #444;
+   font-size: 15px;
+   line-height: 1.6;
+   margin-bottom: 20px;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.exp-skills strong {
+   color: #234C6A;
+   font-weight: 600;
+}
+
+
+/* Right side (image) */
+.exp-images {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+.exp-images img {
+   width: 100%;
+   max-width: 400px;
+   height: 200px;
+   /* LANDSCAPE */
+   object-fit: cover;
+   border-radius: 14px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+}
+
+.exp-images img:hover {
+   transform: scale(1.05);
+}
+
+/* Untuk 1 gambar portrait di experience */
+.exp-images.single {
+   align-items: center;
+   margin-right: 60px;
+   /* agar tidak terlalu ke kanan */
+}
+
+.exp-images.single img {
+   width: 300px;
+   /* lebih sempit, proporsional untuk potrait */
+   height: 420px;
+   /* tinggi lebih besar dari lebar */
+   object-fit: cover;
+   border-radius: 16px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+   transition: transform 0.3s ease;
+}
+
+.exp-images.single img:hover {
+   transform: scale(1.05);
+}
+
+/* Untuk 1 gambar landscape di experience */
+.exp-images.landscape {
+   flex: 1;
+   display: flex;
+   justify-content: flex-end;
+   /* dorong ke kanan */
+   align-items: center;
+   padding-right: 50px;
+   /* jarak dari tepi kanan */
+
+}
+
+.exp-images.landscape img {
+   width: 520px;
+   /* lebih lebar */
+   height: 300px;
+   /* lebih pendek agar proporsi landscape */
+   object-fit: cover;
+   border-radius: 16px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+   transition: transform 0.3s ease;
+}
+
+.exp-images.landscape img:hover {
+   transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+   .exp-item {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .exp-text {
+      text-align: center;
+   }
+
+   .exp-images {
+      justify-content: center;
+   }
+
+   .exp-images img {
+      width: 100%;
+      height: auto;
+   }
+}
